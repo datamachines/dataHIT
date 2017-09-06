@@ -1,0 +1,14 @@
+{
+  "name": "Test Behavior",
+  "shortName": "testb",
+  "dateOfStart": "2017-08-01",
+  "dateOfEnd": "2017-08-31",
+  "contributors": [
+    {
+      "name": "Face detector",
+      "mediaType": "Image",
+      "conditions": "On all new data",
+      "interface": "http://some analytic URI with some analytic parameter structures"
+    }
+  ]
+}

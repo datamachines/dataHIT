@@ -1,0 +1,42 @@
+{
+  "title": "Analytic Behavior",
+  "type": "object",
+  "id": "analyticbehavior",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "Name of this behavior",
+      "minLength": 4,
+      "propertyOrder": 1
+    },
+    "shortName": {
+      "type": "string",
+      "title": "Short Name",
+      "description": "To be used as part of file names or records",
+      "minLength": 3,
+      "propertyOrder": 2
+    },
+    "dateOfStart": {
+      "title": "Start Date",
+      "type": "string",
+      "format": "date",
+      "propertyOrder": 4
+    },
+    "dateOfEnd": {
+      "title": "End Date",
+      "type": "string",
+      "format": "date",
+      "propertyOrder": 5
+    },
+    "contributors": {
+      "type": "array",
+      "title": "Rules",
+      "uniqueItems": true,
+      "propertyOrder": 100,
+      "items": {
+        "$ref": "static/schemas/analyticrule.json"
+      }
+    }
+  }
+}

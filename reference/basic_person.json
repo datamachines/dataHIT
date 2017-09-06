@@ -1,0 +1,37 @@
+{
+  "title": "Person",
+  "type": "object",
+  "id": "person",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "First and Last name",
+      "minLength": 4
+    },
+    "age": {
+      "type": "integer",
+      "default": 21,
+      "minimum": 18,
+      "maximum": 99
+    },
+    "employeeType": {
+      "type": "string",
+      "enum": [
+        "Full Time",
+        "Part Time",
+        "Consultant",
+        "Paid Intern"
+      ]
+    },
+    "billableLCAT": {
+      "type": "string",
+      "enum": [
+        "Data Scientist 4",
+        "Research Engineer 2",
+        "Sr. Full Stack Engineer 3",
+        "Research Intern",
+        "Program Manager 3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Rule",
+  "type": "object",
+  "id": "analyticrule",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "description": "Descriptive name for rule",
+      "minLength": 4,
+      "propertyOrder": 1
+    },
+    "mediaType": {
+      "type": "string",
+      "title": "Media Type",
+      "propertyOrder": 2,
+      "enum": [
+        "Image",
+        "Video",
+        "Image Collection",
+        "Video Stream"
+      ]
+    },
+    "conditions": {
+      "type": "string",
+      "title": "Conditions under which to run",
+      "propertyOrder": 3,
+      "enum": [
+        "On all new data",
+        "Run on sample of new data",
+        "Batch all data on time period"
+      ]
+    },
+    "interface": {
+      "type": "string",
+      "title": "Interface for analytic",
+      "description": "A data structure which describes how to trigger analytic",
+      "propertyOrder": 4
+    }
+  }
+}

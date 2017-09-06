@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>DataHIT</title>
+    <link rel='stylesheet' href='static/foundation.min.css'>
+    <link rel='stylesheet' href='static/font-awesome.css'>
+  </head>
+  <body onload="bodyInit()">
+    <div class='row'>
+      <div class='medium-12 columns'>
+        <h1>DataHIT</h1>
+      </div>
+    </div>
+    <form action="/editor" method="POST" id="newRecForm">
+      <input type="hidden" id="recID" name="recID" value="TBD">
+    </form>
+    <div class='row'>
+      <button type='submit' form='newRecForm' id='newRec' class='tiny'>Create new record</button>
+    </div>
+    <div class='row'>
+      <table>
+        <thead>
+          <tr>
+            <th width="200">Name</th>
+            <th width="150">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${recTable}
+        </tbody>
+      </table>
+    </div>
+    <div class='row'>
+
+    </div>
+
+  </body>
+  <script src="static/datahit-list.js${dev}"></script>
+</html>

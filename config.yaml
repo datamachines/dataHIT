@@ -1,0 +1,6 @@
+port: 31337
+datadir: "/tmp/dataHIT/"
+cacheJavascript: False
+esindex: datahit01
+eshost: localhost
+esport: 9200
