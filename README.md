@@ -19,8 +19,9 @@ This was written with identity management and permissions in mind, but it is not
 5. Go to http://127.0.0.1:31338/list
 6. After it runs, go ahead and edit the schemas in static/schemas/default-schema.json (JSON Schema version 3 and 4) as well as default-data.json to suit data gathering tasks.
 
-http://json-schema.org/latest/json-schema-core.html
-http://json-schema.org/latest/json-schema-validation.html
+### JSON Schema references
+http://json-schema.org/latest/json-schema-core.html  
+http://json-schema.org/latest/json-schema-validation.html  
 
 ## Acknowledgements
 
