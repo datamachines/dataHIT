@@ -12,7 +12,7 @@ This was written with identity management and permissions in mind, but it is not
 ![editor](doc/images/datahiteditor.png)
 
 ## Running
-1. Install ElasticSearch [docs here](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)
+1. Install ElasticSearch - [docs here](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-16-04)
 2. sudo pip install -r requirements.txt
 3. edit config.yaml to point to ElasticSearch
 4. ./datahit.py
