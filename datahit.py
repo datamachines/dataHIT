@@ -20,7 +20,7 @@ app = Flask(__name__)
 eshost = config['eshost']
 esport = int(config['esport'])
 esindex = config['esindex']
-esdoc_type = "datrec"
+esdoc_type = "datarec"
 
 es = Elasticsearch([{'host': eshost, 'port': esport}])
 datahitlog.log("Connected to Elasticsearch")
@@ -91,7 +91,7 @@ def saveplan():
     recDoc['userID'] = userID
     res = es.index(index=esindex, doc_type=esdoc_type, id=recDoc['recID'], body=recDoc)
     print(json.dumps(res))
-    return "Plan saved!"
+    return "Record saved!"
 
 @app.route('/static/<path:path>')
 def send_static(path):

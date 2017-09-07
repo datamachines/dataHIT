@@ -5,7 +5,7 @@ JSONEditor.defaults.iconlib = 'fontawesome4';
 var editor = new JSONEditor(document.getElementById('editor_holder'),{
   ajax: true, // Enable fetching schemas via ajax
   schema: {
-    $ref: "static/schemas/analyticbehavior.json",
+    $ref: "static/schemas/default-schema.json",
     format: "grid"
   },
   startval: start_data
