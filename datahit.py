@@ -64,7 +64,7 @@ def datahiteditor():
         'recID': recID,
         'datarec': json.dumps(datarec)
         }
-    return html.render("templates/editor.html", values, config['cacheJavascript'])
+    return datahithtml.render("templates/editor.html", values, config['cacheJavascript'])
 
 @app.route("/list")
 def hitlist():
@@ -81,9 +81,9 @@ def hitlist():
     }
     print(json.dumps(query))
     r = es.search(index=esindex, doc_type=esdoc_type, body=query)
-    recTable = html.createPlanTable(r['hits']['hits'])
+    recTable = datahithtml.createRecTable(r['hits']['hits'])
     values = {'recTable': recTable }
-    return html.render("templates/list.html", values, config['cacheJavascript'])
+    return datahithtml.render("templates/list.html", values, config['cacheJavascript'])
 
 @app.route("/saverec", methods=["POST"])
 def saveplan():

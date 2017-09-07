@@ -1,4 +1,4 @@
-port: 31337
+port: 31338
 datadir: "/tmp/dataHIT/"
 cacheJavascript: False
 esindex: datahit01

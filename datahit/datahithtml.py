@@ -22,13 +22,14 @@ def dirListBasenames(dirPathPattern):
 def randScriptVer():
     return str(uuid.uuid4())
 
-def createPlanTable(hits):
+def createRecTable(hits):
     tablerows = []
     for hit in hits:
-        planDoc = hit['_source']
-        namecell = "<td>" + planDoc['plan']['name'] + "</td>"
-        actioncell = "<td><form action='/editor' method='POST' id='form" + planDoc['planID'] + "'>\n" + \
-                    "<input type='hidden' name='planID' value='" + planDoc['planID'] + "'></form>\n" + \
-                    "<button type='submit' form='form" + planDoc['planID'] + "' id='button" + planDoc['planID'] + "' class='tiny'>Open</button></td>\n"
+        recDoc = hit['_source']
+        namecell = "<td>" + recDoc['datarec']['name'] + "</td>"
+        actioncell = "<td><form action='/editor' method='POST' id='form" + recDoc['recID'] + "'>\n" + \
+                    "<input type='hidden' name='recID' value='" + recDoc['recID'] + "'></form>\n" + \
+                    "<button type='submit' form='form" + recDoc['recID'] + \
+                    "' id='button" + recDoc['recID'] + "' class='tiny'>Open</button></td>\n"
         tablerows.append("<tr>" +  namecell + actioncell + "</tr>")
     return "\n".join(tablerows)
