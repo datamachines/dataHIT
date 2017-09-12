@@ -1,7 +1,6 @@
 #!/usr/bin/python
 # Probably belongs here...
 from flask import Flask, request, jsonify, send_from_directory
-from flask_sse import sse
 from datetime import datetime
 import datahit
 from datahit import datahithtml, datahitlog
